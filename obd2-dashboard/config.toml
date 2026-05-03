@@ -1,0 +1,22 @@
+[app]
+# "sim" for simulated data, "live" for real OBD2 hardware
+mode = "live"
+port = 8080
+ 
+[obd]
+# Serial port your ELM327 USB adapter appears on.
+# Windows: "COM3", "COM4", etc.  Linux: "/dev/ttyUSB0"
+serial_port = "COM3"
+baudrate = 38400
+# How often to poll the vehicle (seconds)
+poll_interval = 0.5
+# How often to refresh the adapter/car connection (seconds)
+reconnect_interval = 1.0
+ 
+[logging]
+# "every_poll"   — one row per OBD2 read cycle
+# "fixed"        — one row every `interval_seconds`
+# "summary"      — one row at end of session (min/max/avg)
+granularity = "every_poll"
+interval_seconds = 1.0
+output_dir = "logs"

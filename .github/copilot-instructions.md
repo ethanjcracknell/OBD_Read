@@ -1,0 +1,5 @@
+﻿- [x] Verify that the copilot-instructions.md file in the .github directory is created.
+- [ ] Update project to use a Vite + React frontend.
+- [ ] Ensure the Python backend serves the built frontend from frontend/dist.
+- [ ] Fix the CSV logger and clean up backend source files.
+- [ ] Update README with install, dev, and build instructions.
