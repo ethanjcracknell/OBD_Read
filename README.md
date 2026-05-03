@@ -69,29 +69,31 @@ The Vite dev server proxies `/ws` and `/status` to the backend at `http://127.0.
 ## Project structure
 
 ```
-obd2-dashboard/
-├── .gitignore
-├── config.toml
-├── frontend/             # Vite + React dashboard app
-│   ├── index.html
-│   ├── package.json
-│   ├── src/
-│   ├── vite.config.js
-│   └── dist/
-├── main.py
+OBD_READ/
+├── obd2-dashboard/
+│   ├── .gitignore
+│   ├── config.toml
+│   ├── frontend/             # Vite + React dashboard app
+│   │   ├── index.html
+│   │   ├── package.json
+│   │   ├── src/
+│   │   ├── vite.config.js
+│   │   └── dist/
+│   ├── main.py
+│   ├── app/
+│   │   ├── api.py
+│   │   ├── config.py
+│   │   ├── logger.py
+│   │   ├── models.py
+│   │   ├── poller.py
+│   │   └── sources/
+│   │       ├── base.py
+│   │       ├── live.py
+│   │       └── sim.py
+│   └── logs/                # generated at runtime
+├── PROJECT_CONTEXT.txt
 ├── README.md
-├── requirements.txt
-├── app/
-│   ├── api.py
-│   ├── config.py
-│   ├── logger.py
-│   ├── models.py
-│   ├── poller.py
-│   └── sources/
-│       ├── base.py
-│       ├── live.py
-│       └── sim.py
-└── logs/                # generated at runtime
+└── requirements.txt
 ```
 
 ## CSV logs
