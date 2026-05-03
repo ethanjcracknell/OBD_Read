@@ -1,0 +1,32 @@
+Project: OBD2 Dashboard
+
+What this project is:
+- A real-time vehicle telemetry dashboard for OBD-II equipped cars.
+- It reads engine data such as RPM, speed, coolant temperature, and throttle position.
+- The data source can be a live ELM327 USB OBD-II adapter or a simulated data mode.
+- It streams telemetry to a browser-based dashboard and records session logs as CSV files.
+
+Languages and technologies used:
+- Python: backend application, configuration loading, OBD-II polling, logging, and FastAPI server.
+- JavaScript / JSX: frontend dashboard built with React.
+- HTML/CSS: browser UI markup and styling.
+- TOML: application configuration file format (`config.toml`).
+- Node.js / npm: frontend build and development tooling via Vite.
+
+Solution type:
+- Full-stack vehicle telemetry monitoring solution.
+- Real-time dashboard and data visualization app.
+- Lightweight web application with backend API and frontend SPA.
+- Hybrid hardware/software tool that supports both live vehicle interfacing and simulation for development/testing.
+
+Project structure highlights:
+- `main.py`: backend entry point that starts the FastAPI app with uvicorn.
+- `app/`: Python backend modules including API routes, OBD sources, polling, models, and logger.
+- `frontend/`: Vite-powered React app for displaying telemetry data.
+- `config.toml`: runtime configuration for mode, ports, and OBD settings.
+- `logs/`: generated CSV session logs.
+
+Intended audience:
+- Vehicle enthusiasts who want dashboard telemetry from an OBD-II bus.
+- Developers needing a simulation-capable dashboard for testing without hardware.
+- Anyone building real-time browser-based visualizations for live data streams.
